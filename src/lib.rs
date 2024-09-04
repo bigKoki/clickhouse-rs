@@ -308,7 +308,7 @@ impl Client {
 impl ClientHandle {
     pub(crate) async fn hello(&mut self) -> Result<()> {
         let context = self.context.clone();
-        info!("[hello] -> {:?}", &context);
+        // info!("[hello] -> {:?}", &context);
 
         let mut h = None;
         let mut info = None;
@@ -458,7 +458,7 @@ impl ClientHandle {
         with_timeout(
             async {
                 self.wrap_future(move |c| {
-                    info!("[insert]     {}", query.get_sql());
+                    // info!("[insert]     {}", query.get_sql());
                     let transport = c.get_inner();
 
                     async move {
