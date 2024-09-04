@@ -34,7 +34,7 @@ mod chunk_iterator;
 mod compressed;
 mod row;
 
-pub(crate) const INSERT_BLOCK_SIZE: usize = 1_048_576;
+pub(crate) const INSERT_BLOCK_SIZE: usize = 10 * 1_048_576;
 
 const DEFAULT_CAPACITY: usize = 100;
 
